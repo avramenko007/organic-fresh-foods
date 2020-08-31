@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <style type="text/css">
+        .slider {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+    </style>
+    <title>Gulp</title>
+</head>
+
+<body id="app">
+    @@include('_header.html')
+    @@include('_hero.html')
+    @@include('_specification.html')
+    @@include('_about.html')
+    @@include('_products.html')
+    @@include('_story.html')
+    @@include('_testimonials.html')
+    @@include('_blog.html')
+    @@include('_insta.html')
+    @@include('_footer.html')
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $(".lazy").slick({
+                lazyLoad: 'ondemand',
+                infinite: true
+            });
+        });
+
+        var sliBtn = '.search-btn',
+            sliCont = '.search-slide',
+            sliTxt = '.search-slide input[type=text]',
+            sliDis = '.search-close',
+            sliSpd = 300;
+
+        $(sliBtn).click(function () {
+            $(sliCont).animate(
+                { 'width': '190px' }, sliSpd
+            );
+            $(sliTxt).focus();
+        });
+        $(sliDis).click(function () {
+            $(sliCont).animate(
+                { 'width': 0 }, sliSpd
+            );
+        });
+    </script>
+    <script>
+        /*$(document).ready(function () {
+            // Show hide popover
+            $(".cart").click(function () {
+                if (document.getElementsByClassName(".cart__menu_active") === true) {
+                    $(this).find(".cart__menu").removeClass("cart__menu_active");
+                }
+            });
+            $(".cart").click(function () {
+                if (document.getElementsByClassName(".cart__menu_active") === false) {
+                    $(this).find(".cart__menu").addClass("cart__menu_active");
+                }
+            });
+        });
+        $(document).on("click", function (event) {
+            var $trigger = $(".cart");
+            if ($trigger !== event.target && !$trigger.has(event.target).length) {
+                $(".cart__menu").slideUp("fast");
+            }
+        });*/
+    </script>
+</body>
+
+</html>

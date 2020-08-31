@@ -1,0 +1,95 @@
+.products {
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	&__column {
+		box-sizing: border-box;
+		padding: 125px 0 80px;
+	}
+
+	&__image{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	
+
+	&__title {
+		font-size: $h2-font-size-xs;
+		font-family: "Muli-Bold";
+		color: $white-color;
+		line-height: 0.917;
+		text-align: center;
+
+		&_italic{
+			width: 100%;
+			display: block;
+			margin-top: 10px;
+			font-family: "Muli-Italic";
+		}
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		cursor: pointer;
+		max-width: 205px;
+		margin: 50px auto 0;
+		box-sizing: border-box;
+
+		&::after{
+			@include arrow-button-white(22px, auto, 30px);
+			position: absolute;
+		}
+
+		&_red-hover{
+			&:hover{
+				@include hover-button($red-bg, $white-color);
+			}
+		}
+		&_orange-hover{
+			&:hover{
+				@include hover-button($orange-bg, $white-color);
+			}
+		}
+		&_green-hover{
+			&:hover{
+				@include hover-button($green-bg, $white-color);
+			}
+		}
+		&_brown-hover{
+			&:hover{
+				@include hover-button($brown-bg, $white-color);
+			}
+		}
+
+	}
+}
+.item-product {
+	width: $width-col-4;
+
+		&:first-child{
+			background-color: $brown-bg;
+		}
+		&:nth-child(2){
+			background-color: $green-bg;
+		}
+		&:nth-child(3){
+			background-color: $orange-bg;
+		}
+		&:nth-child(4){
+			background-color: $red-bg;
+		}
+
+		@media (max-width: 950px) {
+			width: $width-col-2;
+		}
+
+		@media (max-width: 425px) {
+			width: $width-col-1;
+		}
+}

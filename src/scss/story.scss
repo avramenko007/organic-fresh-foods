@@ -1,0 +1,98 @@
+.story {
+	padding: 110px 0 150px;
+
+	&__row{
+		max-width: 1300px;
+    	margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		width: $width-col-2;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			width: $width-col-1;
+		}
+	}
+
+	&__box{
+		padding: 0 10px;
+		box-sizing: border-box;
+
+		@media (max-width: 768px) {
+			text-align: center;
+			margin-bottom: 45px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 55px;
+	}
+
+	&__description {
+		width: 75%;
+		margin-bottom: 55px;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		position: relative;
+
+		&::after{
+			content: url(../img/story/sun-img.svg);
+			position: absolute;
+			top: 20px;
+			left: -28%;
+
+			@media (max-width: 768px) {
+				top: -80px;
+    			left: 25%;
+			}
+
+			@media (max-width: 425px) {
+				left: 0;
+			}
+		}
+
+		@media (max-width: 768px) {
+			width: 80%;
+    		margin: 100px auto 0;
+		}
+
+		@media (max-width: 425px) {
+			width: 100%;
+		}
+	}
+
+	&__link{
+		width: 300px;
+		display: block;
+		box-sizing: border-box;
+		background-color: $green-color;
+
+		&::after{
+			@include arrow-button-orange(2px, auto, -70px);
+		}
+
+		&:hover{
+			@include hover-button($green-bg, $green-color);
+			border: 2px solid $white-color;
+
+			&::after{
+				@include arrow-button-white(2px, auto, -70px);
+			}
+		}
+
+		@media (max-width: 768px) {
+			margin: auto;
+		}
+	}
+}

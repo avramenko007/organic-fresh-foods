@@ -1,0 +1,8 @@
+# Ignore the build directory
+/FreshFoodProject
+
+# Ignore Sass' cache
+**/*/.sass-cache
+
+# Ignore Node Modules
+/node_modules

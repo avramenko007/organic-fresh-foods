@@ -1,0 +1,250 @@
+.footer {
+	background-color: $bg-footer-color;
+	padding: 50px 15px 90px;
+
+	@media (max-width: 1024px) {
+		padding: 50px 15px 90px;
+	}
+
+	&__row {
+		max-width: 1720px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	&__column {
+		width: $width-col-5;
+
+		&:nth-child(n+3) {
+			width: 30%;
+		}
+
+		&:first-child{
+			display: flex;
+		}
+
+		@media (max-width: 768px) {
+			width: $width-col-2 !important;
+			margin-top: 25px
+		}
+
+		@media (max-width: 755px) {
+			width: $width-col-1 !important;
+		}
+	}
+
+	&__title {
+		font-size: $h1-font-size-xs;
+		font-family: "Muli-ExtraBold";
+		color: $white-color;
+		font-weight: bold;
+		line-height: 1.538; 
+		margin-bottom: 30px;
+	}
+
+	&__information {
+		font-size: $text-size-standart;
+		font-family: "Muli-Bold";
+		line-height: 1.944;
+		list-style: none;
+	}
+
+	&__info-link{
+		color: $brown-bg;
+		text-decoration: none;
+		position: relative;
+
+		&::before{
+			content: '';
+			width: 0%;
+			height: 2px;
+			background-color: $brown-bg;
+			position: absolute;
+			bottom: 0;
+			transition: all 0.5s ease-in-out 0s;
+		}
+		&:hover{
+			&::before{
+				content: '';
+				width: 100%;
+			}
+		}
+	}
+
+	&__payment {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__payment-item{
+		margin: 0 10px 15px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__form-subscribe {
+		max-width: 495px;
+		position: relative;
+
+		&::after{
+			content: '';
+			background: url(../img/footer/envelope.svg);
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 25px;
+			height: 20px;
+			left: 20px;
+			top: 21px;
+		}
+	}
+
+	&__subscribe-input{
+		font-family: "Muli-Bold";
+		color: $brown-testimonials-color;
+		background-color: $white-color;
+		border: none;
+		border-radius: 50px;
+		outline: none;
+		padding: 22px 22px 22px 60px;
+		width: 100%;
+    	box-sizing: border-box;
+
+		&::-webkit-input-placeholder {
+			color: $brown-testimonials-color;
+			font-size: $text-size-standart;
+			font-family: "Muli-Bold";
+			line-height: 2.059; 
+
+			@media (max-width: 1070px) {
+				font-size: $text-size-little;
+			}
+		}
+	}
+
+	&__social-icon{
+		margin: 0 10px;
+	}
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-end;
+	align-self: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 220px;
+	font-family: "Poppins-SemiBold", serif;
+	font-size: 53px;
+	line-height: 1;
+	color: $white-color;
+	text-decoration: none;
+
+	@media (max-width: 1070px) {
+		font-size: $h2-font-size-m;
+		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		justify-content: end;
+		align-self: start;
+	}
+}
+
+.logo_little{
+	font-size: $text-size-button;
+	font-family: "Poppins-Medium";
+	text-align: center;
+	text-shadow: 1px 1.732px 3px rgba(0, 0, 0, 0.1);
+}
+.social-footer {
+	display: flex;
+	align-items: flex-end;
+	width: 95%;
+	justify-content: flex-end;
+	margin-top: 10px;
+	
+	&__arrow{
+		margin-right: 10px;
+	}
+
+	&__text {
+		position: relative;
+		font-size: $text-size-standart;
+		font-family: "Muli-Bold";
+		color: $bg-testimonials;
+		text-transform: uppercase;
+		line-height: 1.6;
+		text-align: center;
+
+		@media (max-width: 768px) {
+			font-size: $text-size-little;
+		}
+	}
+
+	&__icons {
+		display: flex;
+		list-style: none;
+		margin-left: 15px;
+	}
+}
+.after-footer {
+	background-color: $bg-after-footer;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 0 15px;
+
+	&__box{
+		width: 100%;
+		max-width: 1720px;
+		position: relative;
+	}
+
+	&__copyright {
+		font-size: $text-size-little;
+		font-family: "Muli-Regular";
+		color: $grey-pink-color;
+		line-height: 2.692;
+		text-align: center;
+	}
+}
+
+.go-top{
+	position: absolute;
+    right: 0;
+	top: -50px;
+	width: 100px;
+	height: 75px;
+    display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+
+	&__text{
+		font-size: 16px;
+		font-family: "Muli-Bold";
+		color: $white-color;
+		line-height: 0.5;
+	}
+
+	&__box{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		width:50px;
+		height: 50px;
+		background-color: $bright-orange-button-top;
+		border-radius: 7px;
+		margin-left: 50px;
+		transition: all .5s ease-in-out 0s;
+
+		&:hover{
+			margin-top: -10px;
+		}
+	}
+}

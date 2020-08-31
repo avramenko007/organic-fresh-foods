@@ -1,0 +1,115 @@
+.svg-beet-dims { width: 77px; height: 73px; }
+.svg-corn-dims { width: 65px; height: 65px; }
+.svg-heart-dims { width: 64px; height: 58px; }
+.svg-leaves-dims { width: 72px; height: 66px; }
+.svg-plant-dims { width: 70px; height: 67px; }
+.svg-soy-dims { width: 79px; height: 68px; }
+.svg-vegetabels-dims { width: 74px; height: 69px; }
+.svg-wheat-dims { width: 72px; height: 72px; }
+
+.specification {
+    padding: 95px 0 90px;
+
+    &__title {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    &__description {
+        max-width:980px;
+        margin: $margin-center;
+        padding:0 30px;
+        margin-bottom: 60px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    &__box-row{
+        padding: 0px 15px;
+    }
+
+    &__row {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__box {
+        padding: 30px 15px;
+    }
+}
+.title {
+    font-family: "Muli-ExtraBold", serif;
+    font-size: $h2-font-size-xl;
+    color: $title-orange;
+    line-height: 0.8;
+
+    &_orange {
+        color: $bright-orange-color;
+	}
+
+    @media (max-width:1024px) {
+        font-size: $h2-font-size-m;
+    }
+
+    @media (max-width:425) {
+        font-size: $h2-font-size-xs;
+    }
+}
+.description {
+    font-family: "Muli-Regular", serif;
+    font-size: $text-size-standart;
+    color: $brown-black-color;
+    line-height: 1.944;
+    
+}
+.item-specification {
+    width: $width-col-4;
+    border-right: $border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    &:nth-child(-n+4){
+        border-bottom: $border-box;
+    }
+
+    &:nth-child(4n){
+        border-right: none;
+    }
+
+    @media (max-width: 768px) {
+        width: 50%;
+
+        &:nth-child(2n){
+            border-right: none;
+        }
+
+        &:nth-child(-n+6){
+            border-bottom: $border-box;
+        }
+    }
+
+    &__icon {
+        height: auto;
+        display: block;
+    }
+
+    &__title {
+        width: 100%;
+        font-family: "Muli-ExtraBold", serif;
+        font-size: $h2-font-size-xs;
+        color: $bright-orange-color;
+        font-weight: bold;
+        line-height: 1.6;
+        text-align: center;
+         
+        @media (max-width: 768px) {
+            font-size: $text-size-button;
+        }   
+    }
+}
+

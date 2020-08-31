@@ -1,0 +1,35 @@
+.hero {
+	background-color: $orange-color;
+	overflow: hidden;
+	padding-top: 140px;
+
+	&__link {
+		background-color: $green-color;
+		border: 2px solid $green-color;
+		display: table;
+		margin: 80px auto 0;
+
+		&::after {
+			@include arrow-button-orange(2px, 25px, auto);
+		}
+
+		&:hover{
+			@include hover-button($green-bg, $white-color);
+			border: 2px solid $white-color;
+
+			&::after{
+				@include arrow-button-white(2px, 25px, auto);
+			}
+		}
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		margin-top: 25px;
+	}
+
+	&__image-img{
+		max-width: 1500px;
+	}
+}
